@@ -20,8 +20,8 @@ module DemoEngine
           optiosn[:views].each do |directory|
             view_directory directory.to_sym
           end
-        else 
-          view_directory :demo_engine
+        # else 
+        #   view_directory :demo_engine
         end
       end
 
