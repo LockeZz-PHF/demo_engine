@@ -21,6 +21,13 @@ Or install it yourself as:
 $ gem install demo_engine
 ```
 
+## To use the engine and migrate
+This will copy all the migrations in the engine to the app where is engine is mounted
+```bash
+rails demo_engine:install:migrations
+```
+Please run db migrate afterward.
+
 ## Contributing
 Contribution directions go here.
 
