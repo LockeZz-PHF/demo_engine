@@ -5,7 +5,6 @@ module DemoEngine
 
     module ViewPathTemplates
       extend ActiveSupport::Concern
-      source_root File.expand_path("../../../../app/views", __FILE__)
 
       included do 
         argument :scope, required: false, default: nil,
@@ -52,12 +51,13 @@ module DemoEngine
 
     class ViewsGenerator < Rails::Generators::Base
       include ViewPathTemplates
+      source_root File.expand_path("../../../../app/views", __FILE__)
       desc "Copy DemoEngine Views to host application"
       hide!
 
-      # def copy_views
-      #   view_directory :demo_engine
-      # end
+      def copy_views
+        view_directory :demo_engine
+      end
     end
 
   end
