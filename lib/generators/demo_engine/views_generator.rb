@@ -20,8 +20,8 @@ module DemoEngine
           optiosn[:views].each do |directory|
             view_directory directory.to_sym
           end
-        # else 
-        #   view_directory :demo_engine
+        else 
+          view_directory :posts
         end
       end
 
@@ -51,13 +51,13 @@ module DemoEngine
 
     class ViewsGenerator < Rails::Generators::Base
       include ViewPathTemplates
-      source_root File.expand_path("../../../../app/views", __FILE__)
+      source_root File.expand_path("../../../../app/views/demo_engine", __FILE__)
       desc "Copy DemoEngine Views to host application"
       hide!
 
-      def copy_views
-        view_directory :demo_engine
-      end
+      # def copy_views
+      #   view_directory :posts
+      # end
     end
 
   end
