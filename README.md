@@ -28,6 +28,12 @@ rails demo_engine:install:migrations
 ```
 Please run db migrate afterward.
 
+## To copy all views from the engine to host application
+```bash
+rails generate demo_engine:views
+```
+
+
 ## Contributing
 Contribution directions go here.
 
